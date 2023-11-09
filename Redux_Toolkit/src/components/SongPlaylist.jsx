@@ -10,12 +10,11 @@ function SongPlaylist() {
     // this state is the entire state not like in reducer
   });
 
-
-
   const handleSongAdd = (song) => {
     const action = addSong(song);
     dispatch(action)
   };
+
   const handleSongRemove = (song) => {
     dispatch(removeSong(song));
   };
