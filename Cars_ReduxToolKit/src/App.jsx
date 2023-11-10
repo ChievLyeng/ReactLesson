@@ -3,17 +3,14 @@ import { CarList } from './components/CarList'
 import { CarSearch } from './components/CarSearch'
 import { CarValue } from './components/CarValue'
 
-
-import './App.css'
-
 function App() {
  
   return (
     <>
-    <div>
+    <div className='container is-fulid'>
       <CarForm />
-      <CarList />
       <CarSearch />
+      <CarList />
       <CarValue />
     </div>
       
