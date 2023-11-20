@@ -10,6 +10,11 @@ import { fetchOrder } from '../store';
 import { fetchProducts } from '../store';
 import { fetchUser } from '../store';
 import { fetchReview } from '../store';
+import Grid from '@mui/material/Grid'; 
+import Box from '@mui/system/Box';
+import Header from '../commonComponent/Header'
+
+
 
 function SummaryData() {
 
@@ -47,11 +52,12 @@ function SummaryData() {
       const productLength = Products ? Products.length : 0 ;
    
       console.log("user : ", users )
-      console.log("reviews : ",reviews)
+  console.log("reviews : ", reviews)
+  
 
   return (
     <>
-      <div className='container-all'>
+      {/* <div className='container-all'>
         
         <div className='container'>
 
@@ -103,9 +109,80 @@ function SummaryData() {
 
             </div>
           </div>
-        </div>
+      </div> */}
+      
+      <Header
+        backgroundColor="white"
+        color="#82B440"
+        marginBottom={6}
+        height="100px"
+        titlePaddingLeft={4}
+        titlePaddingTop={4}
+        titlePaddingBottom={4}
+      />
+
+      
+    <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 1, md: 1 }} sx={{backgroundColor: "black"}}>
+      
+        
+      <Grid item xs={4}>
+      <Link to="" className='link'>
+              <OutlinedCard
+                title="Total Sale"
+                value={productLength}
+                icon={<Inventory2Icon />}
+              />
+            </Link>
+
+          </Grid>
+          
+      <Grid item xs={4}>
+      <Link to="" className='link'>
+              <OutlinedCard
+                title="Total Products"
+                value={productLength}
+                icon={<Inventory2Icon />}
+              />
+            </Link>
+        </Grid>
+          
+      <Grid item xs={4}>
+      <Link to="" className='link' >
+              <OutlinedCard
+                title="Total Users"
+                value={users.result}
+                icon={<PersonOutlineIcon />}
+              />
+            </Link>
+          </Grid>
+          
+      <Grid item xs={4}>
+      <Link to="" className='link' >
+              <OutlinedCard
+                title="Total Orders"
+                value={orderLength}
+                icon={<ShoppingBagIcon />}
+              />
+            </Link>
+          </Grid>
+          
+      
+      <Grid item xs={4}>
+      <Link to="" className='link' >
+              <OutlinedCard
+                title="Total Reviews"
+                value={reviews.result}
+                icon={<ReviewsIcon />}
+              />
+            </Link>
+      </Grid>
+    </Grid> 
+
+      
+      
     </>
   );
 }
 
 export default SummaryData;
+

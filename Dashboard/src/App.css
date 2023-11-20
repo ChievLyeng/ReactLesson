@@ -1,4 +1,4 @@
-.container-all {
+/* .container-all {
   margin: 160px auto;
 }
 
@@ -14,10 +14,16 @@
   gap: 24px;
   margin-bottom: 24px;
   
-}
+} */
 
 .link {
   text-decoration: none;
+}
+
+.box {
+  color: orange;
+  text-align: left;
+  margin-left: 20px;
 }
 
 
