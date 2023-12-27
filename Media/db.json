@@ -1,9 +1,28 @@
 {
-  "users" : [
-      {"id" : 1,"name" : "Myra"},
-      {"id" : 2,"name" : "Myra"},
-      {"id" : 3,"name" : "Myra"}
+  "users": [
+    {
+      "name": "Jack Dickinson",
+      "id": 1
+    },
+    {
+      "name": "Raul Dare",
+      "id": 2
+    },
+    {
+      "name": "Andre Senger",
+      "id": 3
+    },
+    {
+      "name": "Kathy Tremblay",
+      "id": 4
+    }
   ],
-  "albums" : [],
-  "photos" : []
+  "albums": [
+    {
+      "id" : 10,
+      "title" : "Hiking Trip",
+      "userId" : 1
+    }
+  ],
+  "photos": []
 }
