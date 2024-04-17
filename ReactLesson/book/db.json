@@ -1,10 +1,6 @@
 {
   "books": [
     {
-      "id": "aefd",
-      "title": "Meet youself"
-    },
-    {
       "id": "0b5c",
       "title": "Meet yourself"
     },
@@ -13,12 +9,8 @@
       "title": "去有风的地方"
     },
     {
-      "title": "I love you",
-      "id": "0ff4"
-    },
-    {
-      "id": "f13f",
-      "title": "កម្ពុជា"
+      "id": "580d",
+      "title": "VAGA BOND"
     }
   ]
 }

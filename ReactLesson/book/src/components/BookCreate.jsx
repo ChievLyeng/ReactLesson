@@ -1,8 +1,11 @@
+import useBooksContext from "../hooks/use-books-context";
 import { useState } from "react";
 
-function BookCreate({ onCreate }) {
+function BookCreate() {
   //onCreate is prop recieve form app when submit the add
   const [title, setTitle] = useState("");
+
+  const { createBook } = useBooksContext();
 
   const handleChange = (event) => {
     setTitle(event.target.value); //see what get from the input form
@@ -10,7 +13,7 @@ function BookCreate({ onCreate }) {
 
   const handleSubmit = (event) => {
     event.preventDefault(); //prevent from reloading page after submit form
-    onCreate(title);
+    createBook(title);
     setTitle(""); //make the input field empty when added
   };
 

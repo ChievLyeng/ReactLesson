@@ -1,7 +1,10 @@
 import { useState } from "react";
+import useBooksContext from "../hooks/use-books-context";
 
 function BookEdit({ book, onSubmit }) {
   const [title, setTitle] = useState(book.title); //what we put in the state is the default value
+
+  const { editBookById } = useBooksContext();
 
   const handleChange = (event) => {
     //event is mean recieve event obj
@@ -10,7 +13,8 @@ function BookEdit({ book, onSubmit }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(book.id, title);
+    onSubmit();
+    editBookById(book.id, title);
   };
 
   return (
