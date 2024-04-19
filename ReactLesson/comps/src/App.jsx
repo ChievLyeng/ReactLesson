@@ -5,20 +5,42 @@ import { GoLaw } from "react-icons/go";
 import "./App.css";
 
 function App() {
+  const handleClick = () => {
+    console.log("click!!!");
+  };
+
+  const mouseEnter = () => {
+    console.log("Mounse Enter !!");
+  };
+
+  const mouseLeave = () => {
+    console.log("Mouse Leave !!");
+  };
+
   return (
     <>
-      <div>
+      <div className="bg-blue">
         <div>
-          <Button>Click me!!</Button>
+          <Button
+            className="mb-5"
+            secondary
+            outline
+            rounded
+            onClick={handleClick}
+          >
+            Click me!!
+          </Button>
         </div>
         <div>
-          <Button secondary outline>
+          <Button className="mb-5" secondary outline onMouseLeave={mouseLeave}>
             <GoAlert />
             Secondary
           </Button>
         </div>
         <div>
-          <Button secondary>Buy Now!</Button>
+          <Button secondary onMouseEnter={mouseEnter}>
+            Buy Now!
+          </Button>
         </div>
         <div>
           <Button success>
